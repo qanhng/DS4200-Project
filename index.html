@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unemployment rate study</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+     
+    <h1> Global Weather Analysis: A Study of Capital Cities </h1>
+
+    <h3>Introduction</h3>
+
+    <p>Weather plays a crucial role in our daily lives, influencing everything 
+      from agriculture and tourism to transportation and public health. Capital cities, 
+      as political, economic, and cultural hubs, often shape national policies in areas 
+      like urban planning, agriculture, and disaster preparedness. Their weather patterns 
+      can represent broader regions, especially in countries where significant populations 
+      live around the capital. This makes them valuable for studying national responses to 
+      climate change and regional impacts. This project aims to analyze a comprehensive dataset 
+      of daily weather information from capital cities around the world, starting from August 2023. 
+      With over 40 features—including temperature, wind, pressure, precipitation, humidity, 
+      visibility, and air quality measurements—this dataset enables the exploration of global weather 
+      trends and their relationships. By examining this data, we can uncover insights about climate 
+      variability, identify regions most affected by climate change, and provide valuable information 
+      for policymakers and the general public. Understanding these weather patterns can then help us 
+      predict climate trends, prepare for extreme weather events, and mitigate potential impacts on society.
+    </p>
+
+    <p> To learn more about the relationship between climate variability and extreme weather events, you can visit 
+      <a href="https://www.tandfonline.com/doi/full/10.1080/10962247.2021.1942319#abstract"> Climate Change 
+        and Weather Extremes: A review of Recent Findings. </a>
+        Since climate data is collected across a large number of weather stations globally, it is important to 
+        understand the complexities involved in estimating global temperatures through collecting large-scale data,
+        as well as potential methodologies for correcting biases and ensuring the accuracy of climate trend analysis through 
+      <a href="https://journals.ametsoc.org/view/journals/clim/10/10/1520-0442_1997_010_2548_eseils_2.0.co_2.xml">
+        Estimating Sampling Errors in Large-Scale Temperature Averages
+      </a>
+    </p>
+
+    <h3>Introduction to the Data</h3>
+
+    <p>Data source: <a href="https://www.kaggle.com/datasets/nelgiriyewithana/global-weather-repository">Global Weather Repository</a>
+    </p>
+
+    <p> To investigate recent weather trends and patterns on a global scale, we have decided to examine the World Weather Repository 
+      dataset, which contains daily weather data for capital cities around the world, starting from August 2023. We have been able to 
+      obtain the dataset through Kaggle as a CSV file that contains a single table with 41 columns and 28,147 rows. For a specific day, 
+      there are 195 rows with weather condition measurements for capital cities of 195 countries around the world. This dataset provides 
+      40+ features of the current weather and climate conditions globally, including crucial attributes that we are interested in such 
+      as temperature, weather condition, amount of precipitation, humidity, UV index, as well as air quality metrics for carbon monoxide, 
+      nitrogen oxide, PM 2.5, PM 10, sulfur dioxide, and the U.S. EPA air quality index. Most attributes of this dataset are quantitative 
+      (including attributes such as temperature, amount of precipitation, humidity, air quality measurements etc.), as they are 
+      measurements of different features of the weather in cities, however, there is still meaningful ordered (EPA air quality index, 
+      UV index, GB DEFRA Index) and unordered categorical data (weather condition), as well as date/time data that are relevant to our analysis. 
+    </p>  
+
+        <div class="center">
+        <table class="tg">
+            <thead>
+              <tr>
+                <th class="tg-0lax"><b>Variable Name</b></th>
+                <th class="tg-0lax"><b>Details</b></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tg-0lax">PM 2.5</td>
+                <td class="tg-0lax">Level of PM 2.5, measured in µg/m3</td>
+              </tr>
+              <tr>
+                <td class="tg-0lax">Temperature</td>
+                <td class="tg-0lax">Average daily temperature, in Fahrenheit</td>
+              </tr>
+              <tr>
+                <td class="tg-0lax">Weather Condition</td>
+                <td class="tg-0lax">Daily weather condition</td>
+              </tr>
+
+            </tbody>
+            </table>
+        </div>
+        <p>Meanwhile, we also believe that the geographical 
+            information is important when evaluating the unemployment
+            rate. Therefore, we also make use of geographical information 
+            on <a href="https://www.naturalearthdata.com/downloads/">Natural Earth</a>. 
+            The website provides the geographical information for making maps for US states. 
+        </p>
+
+        <p>To make a better data visualization, we remove the Alaska and Hawaii
+            from the data. Following is an interactive map for the 
+            lower 48 states in US. User can zoom in the map. The color
+            indicates the unemployment rate for each state. When click any 
+            state, other social factors will be revealed for the state. </p>
+
+            <div class = 'center'>
+                <iframe src="map.html" width="80%" height="400px" frameborder="0"></iframe>
+            </div>
+            
+            <p>In general, west coast states tend to have higher 
+                unemployment rate. On the east coast, West virginia 
+                and New York state tend to have higher unemplyment rate
+                than the others. In the south, Mississippi and Louisiana
+                are the ones with the much higher unemplyment rate.
+            </p>
+
+        <h3>Air Quality - The Level of PM2.5 in Europe vs. Asia for different weather conditions</h3>
+        
+        <div class = 'container'>
+            <svg id="airqualityplots"></svg>
+
+            <script src="https://d3js.org/d3.v7.min.js"></script>
+            <script src="air_quality.js"></script>
+
+            <svg id="temperatureplots"></svg>
+            <script src="temperature.js"></script>
+
+        </div>
+
+        <p> The first bar plot demonstrates the level of PM2.5 in different weather conditions in capital
+            cities of Asia and Europe. Overall, it is very clear that there is a distinguishable difference
+            in the level of PM2.5- indicating a higher level of air pollution - across all weather types in
+            Asia, compared to Europe. This pattern suggests that there is an uneven distribution of air pollution.
+            We have chosen to visualize data from Asia versus Europe as according to the 
+            <a href="https://epi.yale.edu/epi-results/2020/component/air">Environmental Performance Index</a>, which measures 
+            the direct impacts of air pollution on human health in each country, 4 out of the top 5 countries with the best weather
+            performance score are in Europe, while the 5 countries with the lowest index are in Asia, which further confirms the 
+            pattern shown in the bar plot, where the levels of PM2.5 in capital cities in Asia are all higher than that in Europe.
+
+
+            pollution levels in their capital cities can help assess the effectiveness of their climate policies and 
+            push for stronger accountability in mitigating global climate effects.
+
+</body>
+</html>
