@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Analysis</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="nav-buttons" style="text-align: center; margin: 20px 0;">
+        <a href="index.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Main Page</a>
+        <a href="secondPage.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Global Analysis</a>
+        <a href="thirdPage.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Europe vs. Asia</a>
+    </div>
+
+    <h1> Temperature and Air Quality Analysis in each continent </h1>
+
+    <h2>Temperature vs. PM10 in cities where Air Quality Index is greater than or equal to 3</h2>
+    <p>The analysis of the temperature and PM10 Air Quality Index (AQI) across cities in Asia, Europe,  Africa, and the Americas 
+        reveals notable regional differences and trends. </p>
+
+        <h3> Asia </h3>
+        <p>In Asian cities, a positive correlation between temperature and PM10 AQI 
+        is evident, with higher temperatures often coinciding with elevated AQI levels. Cities like Beijing Shi and New Delhi 
+        stand out with significantly higher AQI values, reflecting the impacts of urbanization, industrial activity, and vehicular 
+        emissions. The trend in Asian cities suggests that warmer temperatures might exacerbate pollution levels, possibly due to 
+        increased photochemical reactions in urban areas.</p>
+        <div class = 'center'>
+            <iframe src="temp_pm10_asia.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+
+        <h3>Europe</h3>
+        <p>In contrast to Asia, European cities such as Amsterdam, Rome, and Paris exhibit a narrower range of both temperature and 
+            AQI values. While there is still a positive relationship between the two variables, the lower AQI levels compared to Asian 
+            cities suggest better air quality management and stricter environmental regulations in Europe. The clustering of European cities 
+            within a mid-temperature range reflects a more uniform climate across the region, with fewer extreme pollution events.</p>
+        <div class = 'center'>
+            <iframe src="temp_pm10_europe.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+
+        <h3>Africa</h3>
+        <p>African cities, including Cairo, Nairobi, and Pretoria, display a more dispersed distribution of temperature and AQI values. 
+            The broader range likely reflects the diverse climatic and environmental conditions across the continent. While some cities 
+            maintain relatively low AQI levels, others show higher values, potentially due to localized factors like urban density, industrial 
+            activity, and seasonal dust storms. Overall, the analysis highlights significant geographic variations in air quality trends, 
+            with Asian cities facing more severe pollution challenges, Europe maintaining stricter air quality standards, and Africa experiencing 
+            diverse air quality patterns driven by local conditions.</p>
+        <div class = 'center'>
+            <iframe src="temp_pm10_africa.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+        
+        <h3>America</h3>
+        <p>In the South and North American cities plot, a significant clustering of data points is observed at lower PM10 AQI values (below 200) 
+            across a temperature range of 15°C to 30°C, indicating relatively better air quality in many cities. However, a few cities, such as Lima, 
+            exhibit extremely high AQI values exceeding 1,000, predominantly in the cooler temperature range (6°C to 12°C), suggesting localized 
+            pollution challenges possibly influenced by atmospheric or topographical conditions. No clear correlation is evident between temperature 
+            and AQI, highlighting that air quality is driven more by region-specific factors like urban density, industrial activities, and policy 
+            measures. The analysis underscores significant variability across cities, with some regions facing severe air quality issues while others 
+            maintain relatively low AQI</p>
+        <div class = 'center'>
+            <iframe src="temp_pm10_america.html" width="100%" height="600px" frameborder="0"></iframe>
+        </div>
+        
+        <p>It’s also important to note that in the provided analysis of air quality trends above,  there are no Australian cities with a PM10 Air Quality Index (AQI) 
+            below 3, hence no plot could be rendered. This absence suggests that Australian cities consistently maintain lower PM10 AQI values. Such an omission 
+            highlights a potential area for further investigation, as Australia’s stringent environmental policies and its geographical isolation may contribute 
+            to cleaner air compared to regions with higher urban and industrial densities. This insight could offer valuable context when comparing global air quality 
+            trends and identifying best practices for pollution mitigation.</p>
+
+    <h2>Air Quality - The Level of PM2.5 in Europe vs. Asia for different weather conditions</h2>
+        
+        <div class = 'container'>
+            <svg id="airqualityplots"></svg>
+
+            <script src="https://d3js.org/d3.v7.min.js"></script>
+            <script src="air_quality.js"></script>
+
+            <svg id="temperatureplots"></svg>
+            <script src="temperature.js"></script>
+
+        </div>
+
+        <p> The first bar plot demonstrates the level of PM2.5 in different weather conditions in capital
+            cities of Asia and Europe. Overall, it is very clear that there is a distinguishable difference
+            in the level of PM2.5- indicating a higher level of air pollution - across all weather types in
+            Asia, compared to Europe. This pattern suggests that there is an uneven distribution of air pollution.
+            We have chosen to visualize data from Asia versus Europe as according to the 
+            <a href="https://epi.yale.edu/epi-results/2020/component/air">Environmental Performance Index</a>, which measures 
+            the direct impacts of air pollution on human health in each country, 4 out of the top 5 countries with the best weather
+            performance score are in Europe, while the 5 countries with the lowest index are in Asia, which further confirms the 
+            pattern shown in the bar plot, where the levels of PM2.5 in capital cities in Asia are all higher than that in Europe.
+
+
+            pollution levels in their capital cities can help assess the effectiveness of their climate policies and 
+            push for stronger accountability in mitigating global climate effects.
+</body>
+</html>
