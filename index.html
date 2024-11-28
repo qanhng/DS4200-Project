@@ -10,6 +10,7 @@
     <div class="nav-buttons" style="text-align: center; margin: 20px 0;">
       <a href="index.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Main Page</a>
       <a href="secondPage.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Global Analysis</a>
+      <a href="thirdPage.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Europe vs. Asia</a>
     </div>
      
     <h1> Global Weather Analysis: A Study of Capital Cities </h1>
@@ -74,6 +75,10 @@
                 <td class="tg-0lax">Level of PM 2.5, measured in µg/m3</td>
               </tr>
               <tr>
+                <td class="tg-0lax">PM10 AQI</td>
+                <td class="tg-0lax">PM10 Air Quality Index</td>
+              </tr>
+              <tr>
                 <td class="tg-0lax">Temperature</td>
                 <td class="tg-0lax">Average daily temperature, in Fahrenheit</td>
               </tr>
@@ -85,56 +90,15 @@
             </tbody>
             </table>
         </div>
-        <p>Meanwhile, we also believe that the geographical 
-            information is important when evaluating the unemployment
-            rate. Therefore, we also make use of geographical information 
-            on <a href="https://www.naturalearthdata.com/downloads/">Natural Earth</a>. 
-            The website provides the geographical information for making maps for US states. 
-        </p>
-
-        <p>To make a better data visualization, we remove the Alaska and Hawaii
-            from the data. Following is an interactive map for the 
-            lower 48 states in US. User can zoom in the map. The color
-            indicates the unemployment rate for each state. When click any 
-            state, other social factors will be revealed for the state. </p>
 
             <div class = 'center'>
-                <iframe src="map.html" width="80%" height="400px" frameborder="0"></iframe>
+                <iframe src="interactive_air_quality_map.html" width="80%" height="400px" frameborder="0"></iframe>
             </div>
+
+            <div class = 'center'>
+              <iframe src="interactive_air_quality_map_continents.html" width="80%" height="400px" frameborder="0"></iframe>
+          </div>
             
-            <p>In general, west coast states tend to have higher 
-                unemployment rate. On the east coast, West virginia 
-                and New York state tend to have higher unemplyment rate
-                than the others. In the south, Mississippi and Louisiana
-                are the ones with the much higher unemplyment rate.
-            </p>
-
-        <h3>Air Quality - The Level of PM2.5 in Europe vs. Asia for different weather conditions</h3>
-        
-        <div class = 'container'>
-            <svg id="airqualityplots"></svg>
-
-            <script src="https://d3js.org/d3.v7.min.js"></script>
-            <script src="air_quality.js"></script>
-
-            <svg id="temperatureplots"></svg>
-            <script src="temperature.js"></script>
-
-        </div>
-
-        <p> The first bar plot demonstrates the level of PM2.5 in different weather conditions in capital
-            cities of Asia and Europe. Overall, it is very clear that there is a distinguishable difference
-            in the level of PM2.5- indicating a higher level of air pollution - across all weather types in
-            Asia, compared to Europe. This pattern suggests that there is an uneven distribution of air pollution.
-            We have chosen to visualize data from Asia versus Europe as according to the 
-            <a href="https://epi.yale.edu/epi-results/2020/component/air">Environmental Performance Index</a>, which measures 
-            the direct impacts of air pollution on human health in each country, 4 out of the top 5 countries with the best weather
-            performance score are in Europe, while the 5 countries with the lowest index are in Asia, which further confirms the 
-            pattern shown in the bar plot, where the levels of PM2.5 in capital cities in Asia are all higher than that in Europe.
-
-
-            pollution levels in their capital cities can help assess the effectiveness of their climate policies and 
-            push for stronger accountability in mitigating global climate effects.
 
 </body>
 </html>
