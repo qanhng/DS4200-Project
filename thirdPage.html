@@ -10,7 +10,7 @@
     <div class="nav-buttons" style="text-align: center; margin: 20px 0;">
         <a href="index.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Main Page</a>
         <a href="secondPage.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Global Analysis</a>
-        <a href="thirdPage.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Europe vs. Asia</a>
+        <a href="thirdPage.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Continent Analysis</a>
     </div>
 
     <h1> Temperature and Air Quality Analysis in each continent </h1>
@@ -68,6 +68,10 @@
             trends and identifying best practices for pollution mitigation.</p>
 
     <h2>Air Quality - The Level of PM2.5 in Europe vs. Asia for different weather conditions</h2>
+    <p> We have chosen to visualize data from Asia versus Europe as according to the 
+        <a href="https://epi.yale.edu/epi-results/2020/component/air">Environmental Performance Index</a>, which measures 
+        the direct impacts of air pollution on human health in each country, 4 out of the top 5 countries with the best weather
+        performance score are in Europe, while the 5 countries with the lowest index are in Asia </p>
         
         <div class = 'container'>
             <svg id="airqualityplots"></svg>
@@ -84,14 +88,15 @@
             cities of Asia and Europe. Overall, it is very clear that there is a distinguishable difference
             in the level of PM2.5- indicating a higher level of air pollution - across all weather types in
             Asia, compared to Europe. This pattern suggests that there is an uneven distribution of air pollution.
-            We have chosen to visualize data from Asia versus Europe as according to the 
-            <a href="https://epi.yale.edu/epi-results/2020/component/air">Environmental Performance Index</a>, which measures 
-            the direct impacts of air pollution on human health in each country, 4 out of the top 5 countries with the best weather
-            performance score are in Europe, while the 5 countries with the lowest index are in Asia, which further confirms the 
-            pattern shown in the bar plot, where the levels of PM2.5 in capital cities in Asia are all higher than that in Europe.
-
-
-            pollution levels in their capital cities can help assess the effectiveness of their climate policies and 
-            push for stronger accountability in mitigating global climate effects.
+            The pattern observed above between Asia and Europe confirms what the Environmental Performance Index shows, as
+            the levels of PM2.5 in capital cities in Asia are all higher than that in Europe. The detailed look into each
+            continent's and even countries' pollution levels in their capital cities can help assess the effectiveness of their climate 
+            policies and push for stronger accountability in mitigating global climate effects.
+            
+    <h3> Next steps </h3>
+    <p> As we have identified and analyzed general trends in temperature and air quality across the capital cities in different continents,
+    we could focus on specific countries where air quality is very good or very bad, obtain data for every city, and visualize them to see
+    the distribution of pollution across the country. It would also be helpful to calculate the median and interquartile range in temperature,
+    air quality index, and other metrics for each country and compare them together using side-by-side box plots to see statistical significance. </p>
 </body>
 </html>
