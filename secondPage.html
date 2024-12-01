@@ -3,52 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temperature Analysis</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>Global Temperature and Air Quality Analysis</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+        }
+        .continent-section {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+        }
+        .nav-buttons a {
+            transition: all 0.3s ease;
+        }
+        .nav-buttons a:hover {
+            background-color: #45a049;
+            transform: translateY(-2px);
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            align-items: center;
+        }
+        .image-container img {
+            max-width: 45%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
-<body>
-    <div class="nav-buttons" style="text-align: center; margin: 20px 0;">
-        <a href="index.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Main Page</a>
-        <a href="secondPage.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Global Analysis</a>
-        <a href="thirdPage.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Continent Analysis</a>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-4 py-8">
+        <div class="nav-buttons text-center mb-8">
+            <a href="index.html" class="inline-block bg-green-500 text-white px-6 py-3 rounded-lg mx-2 hover:bg-green-600 transition duration-300">Main Page</a>
+            <a href="secondPage.html" class="inline-block bg-green-500 text-white px-6 py-3 rounded-lg mx-2 hover:bg-green-600 transition duration-300">Global Analysis</a>
+            <a href="thirdPage.html" class="inline-block bg-green-500 text-white px-6 py-3 rounded-lg mx-2 hover:bg-green-600 transition duration-300">Continent Analysis</a>
+        </div>
+
+        <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">Global Temperature and Air Quality Analysis</h1>
+
+        <div class="continent-section">
+            <h2 class="text-2xl font-semibold mb-4">Global Climate Overview</h2>
+            <p class="text-gray-700 leading-relaxed">
+                The comprehensive dataset reveals a complex picture of environmental conditions across five major world regions, highlighting significant variations in both air quality and temperature. Each continent presents a unique profile that reflects its geographical, industrial, and environmental characteristics.
+            </p>
+        </div>
+
+        <div class="continent-section">
+            <h3 class="text-xl font-semibold mb-4">Detailed Continental Analysis</h3>
+            
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-4">Asian Cities</h3>
+                <div class="image-container">
+                    <img src="./images/AsiaAQ.png" alt="Asia Air Quality" />
+                    <img src="./images/AsiaTemperature.png" alt="Asia Temperature" />
+                </div>
+                <p class="text-gray-700 mt-4">
+                    Asia emerges as the most extreme environment, with the highest mean temperature of 83.8°F and a substantial temperature range of 107.4°F spanning from 13.2°F to 120.6°F. This dramatic variation suggests Asia encompasses incredibly diverse climatic zones, from frigid mountain regions to scorching desert landscapes. While Asia's temperature variability is remarkable, its air quality is equally noteworthy, with a mean EPA index of 1.9 and a maximum of 6.0, indicating significant air pollution challenges.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-4">African Cities</h3>
+                <div class="image-container">
+                    <img src="./images/AfricaAQ.png" alt="Africa Air Quality" />
+                    <img src="./images/AfricaTemp.png" alt="Africa Temperature" />
+                </div>
+                <p class="text-gray-700 mt-4">
+                    Africa follows closely with a mean temperature of 82.0°F, ranging from 38.2°F to 116.8°F across a 78.6°F span. Its air quality metrics are slightly lower than Asia's, with a mean EPA index of 1.4 and a maximum of 6.0. The continent's temperature and air quality data suggest a predominantly warm climate with substantial regional differences.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-4">European Cities</h3>
+                <div class="image-container">
+                    <img src="./images/EuropeAQ.png" alt="Europe Air Quality" />
+                    <img src="./images/EuropeTemp.png" alt="Europe Temperature" />
+                </div>
+                <p class="text-gray-700 mt-4">
+                    Europe presents a more moderate profile, with a mean temperature of 73.4°F and a temperature range of 74.1°F (from 32.4°F to 106.5°F). Its air quality is notably better, with the lowest mean EPA index of 1.2 and a maximum of 5.0, potentially reflecting more stringent environmental regulations and advanced industrial practices.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-4">American Cities</h3>
+                <div class="image-container">
+                    <img src="./images/AmericaAQ.png" alt="America Air Quality" />
+                    <img src="./images/AmericaTemp.png" alt="America Temperature" />
+                </div>
+                <p class="text-gray-700 mt-4">
+                    The Americas show similar characteristics to Europe, with a slightly cooler mean temperature of 72.4°F and a temperature range of 66.6°F (from 28.9°F to 95.5°F). The air quality metrics mirror those of Africa, with a mean EPA index of 1.4 and a maximum of 6.0, suggesting comparable environmental challenges.
+                </p>
+            </div>
+
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-4">Australian Cities</h3>
+                <div class="image-container">
+                    <img src="./images/AustraliaAQ.png" alt="Australia Air Quality" />
+                    <img src="./images/AustraliaTemp.png" alt="Australia Temperature" />
+                </div>
+                <p class="text-gray-700 mt-4">
+                    Australia stands out as the most temperate region, with the lowest mean temperature of 45.0°F and the smallest temperature range of 41.1°F (from 25.3°F to 66.4°F). Its air quality is the most pristine, with the lowest mean EPA index of 1.0 and a maximum of only 2.0. This data suggests Australia's less dense population, stricter environmental policies, and geographical isolation contribute to its superior air quality and more stable climate.
+                </p>
+            </div>
+        </div>
+
+        <div class="continent-section">
+            <h3 class="text-xl font-semibold mb-4">Global Insights</h3>
+            <p class="text-gray-700 leading-relaxed">
+                The global dataset underscores the importance of regional environmental monitoring and the need for targeted approaches to address air quality and climate challenges. While some regions like Asia face significant environmental pressures, others like Australia demonstrate the potential for maintaining high environmental standards.
+            </p>
+        </div>
     </div>
-
-    <h1>Global Temperature and Air Quality Analysis</h1>
-
-    <h3>Asian Cities</h3> 
-    <div class="container" style="display: flex; justify-content: center; gap: 20px;">
-        <img src="./images/AsiaAQ.png" alt="Image 1 Description" style="max-width: 45%; height: auto;" />
-        <img src="./images/AsiaTemperature.png" alt="Image 2 Description" style="max-width: 45%; height: auto;" />
-    </div>
-
-    <h3>African Cities</h3>
-    <div class="container" style="display: flex; justify-content: center; gap: 20px;">
-        <img src="./images/AfricaAQ.png" alt="Image 1 Description" style="max-width: 45%; height: auto;" />
-        <img src="./images/AfricaTemp.png" alt="Image 2 Description" style="max-width: 45%; height: auto;" />
-    </div>
-
-    <h3>European Cities</h3>
-    <div class="container" style="display: flex; justify-content: center; gap: 20px;">
-        <img src="./images/EuropeAQ.png" alt="Image 1 Description" style="max-width: 45%; height: auto;" />
-        <img src="./images/EuropeTemp.png" alt="Image 2 Description" style="max-width: 45%; height: auto;" />
-    </div>
-
-    <h3>American Cities</h3>
-    <div class="container" style="display: flex; justify-content: center; gap: 20px;">
-        <img src="./images/AmericaAQ.png" alt="Image 1 Description" style="max-width: 45%; height: auto;" />
-        <img src="./images/AmericaTemp.png" alt="Image 2 Description" style="max-width: 45%; height: auto;" />
-    </div>
-
-    <h3>Australian Cities</h3>
-    <div class="container" style="display: flex; justify-content: center; gap: 20px;">
-        <img src="./images/AustraliaAQ.png" alt="Image 1 Description" style="max-width: 45%; height: auto;" />
-        <img src="./images/AustraliaTemp.png" alt="Image 2 Description" style="max-width: 45%; height: auto;" />
-    </div>
-
-    <h3>Global Air Quality Vs Temperature</h3>
-    <p>Temperature variations across seasons provide insights into changing climate patterns 
-       and their potential impacts on various regions.</p>
-
 
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="second_page_viz.js"></script>
