@@ -5,38 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Global Temperature and Air Quality Analysis</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-        body {
-            background-color: #f4f4f4;
-            font-family: 'Arial', sans-serif;
-        }
-        .continent-section {
-            background-color: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-        }
-        .nav-buttons a {
-            transition: all 0.3s ease;
-        }
-        .nav-buttons a:hover {
-            background-color: #45a049;
-            transform: translateY(-2px);
-        }
-        .image-container {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            align-items: center;
-        }
-        .image-container img {
-            max-width: 45%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-        }
-    </style>
+    <link href="style2.css" rel="stylesheet">
 </head>
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 py-8">
@@ -112,6 +81,10 @@
                     Australia stands out as the most temperate region, with the lowest mean temperature of 45.0°F and the smallest temperature range of 41.1°F (from 25.3°F to 66.4°F). Its air quality is the most pristine, with the lowest mean EPA index of 1.0 and a maximum of only 2.0. This data suggests Australia's less dense population, stricter environmental policies, and geographical isolation contribute to its superior air quality and more stable climate.
                 </p>
             </div>
+        </div>
+
+        <div class="continent-section">
+            <h3 class="text-2xl font-semibold text-gray-700 mb-4">Continent Visualizations</h3>
         </div>
 
         <div class="continent-section">

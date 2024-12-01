@@ -4,101 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unemployment rate study</title>
-    <link href="style.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="style2.css" rel="stylesheet" />
 </head>
-<body>
-    <div class="nav-buttons" style="text-align: center; margin: 20px 0;">
-      <a href="index.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Main Page</a>
-      <a href="secondPage.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Global Analysis</a>
-      <a href="thirdPage.html" style="padding: 10px 20px; margin: 0 10px; font-size: 16px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 4px;">Continent Analysis</a>
+<body class="bg-gray-100">
+    <div class="nav-buttons text-center my-5">
+        <a href="index.html" class="inline-block bg-green-500 text-white px-5 py-2 mx-2 rounded-md hover:bg-green-600 transition duration-300">Main Page</a>
+        <a href="secondPage.html" class="inline-block bg-green-500 text-white px-5 py-2 mx-2 rounded-md hover:bg-green-600 transition duration-300">Global Analysis</a>
+        <a href="thirdPage.html" class="inline-block bg-green-500 text-white px-5 py-2 mx-2 rounded-md hover:bg-green-600 transition duration-300">Continent Analysis</a>
     </div>
      
-    <h1> Global Weather Analysis: A Study of Capital Cities </h1>
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-6"> Global Weather Analysis: A Study of Capital Cities </h1>
 
-    <h3>Introduction</h3>
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h3 class="text-2xl font-semibold mb-4">Introduction</h3>
 
-    <p>Weather plays a crucial role in our daily lives, influencing everything 
-      from agriculture and tourism to transportation and public health. Capital cities, 
-      as political, economic, and cultural hubs, often shape national policies in areas 
-      like urban planning, agriculture, and disaster preparedness. Their weather patterns 
-      can represent broader regions, especially in countries where significant populations 
-      live around the capital. This makes them valuable for studying national responses to 
-      climate change and regional impacts. This project aims to analyze a comprehensive dataset 
-      of daily weather information from capital cities around the world, starting from August 2023. 
-      With over 40 features—including temperature, wind, pressure, precipitation, humidity, 
-      visibility, and air quality measurements—this dataset enables the exploration of global weather 
-      trends and their relationships. By examining this data, we can uncover insights about climate 
-      variability, identify regions most affected by climate change, and provide valuable information 
-      for policymakers and the general public. Understanding these weather patterns can then help us 
-      predict climate trends, prepare for extreme weather events, and mitigate potential impacts on society.
-    </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Weather plays a crucial role in our daily lives, influencing everything 
+                from agriculture and tourism to transportation and public health. Capital cities, 
+                as political, economic, and cultural hubs, often shape national policies in areas 
+                like urban planning, agriculture, and disaster preparedness. Their weather patterns 
+                can represent broader regions, especially in countries where significant populations 
+                live around the capital. This makes them valuable for studying national responses to 
+                climate change and regional impacts. This project aims to analyze a comprehensive dataset 
+                of daily weather information from capital cities around the world, starting from August 2023. 
+                With over 40 features—including temperature, wind, pressure, precipitation, humidity, 
+                visibility, and air quality measurements—this dataset enables the exploration of global weather 
+                trends and their relationships. By examining this data, we can uncover insights about climate 
+                variability, identify regions most affected by climate change, and provide valuable information 
+                for policymakers and the general public. Understanding these weather patterns can then help us 
+                predict climate trends, prepare for extreme weather events, and mitigate potential impacts on society.
+            </p>
 
-    <p> To learn more about the relationship between climate variability and extreme weather events, you can visit 
-      <a href="https://www.tandfonline.com/doi/full/10.1080/10962247.2021.1942319#abstract"> Climate Change 
-        and Weather Extremes: A review of Recent Findings. </a>
-        Since climate data is collected across a large number of weather stations globally, it is important to 
-        understand the complexities involved in estimating global temperatures through collecting large-scale data,
-        as well as potential methodologies for correcting biases and ensuring the accuracy of climate trend analysis through 
-      <a href="https://journals.ametsoc.org/view/journals/clim/10/10/1520-0442_1997_010_2548_eseils_2.0.co_2.xml">
-        Estimating Sampling Errors in Large-Scale Temperature Averages
-      </a>
-    </p>
+            <p class="text-gray-700 leading-relaxed">
+                To learn more about the relationship between climate variability and extreme weather events, you can visit 
+                <a href="https://www.tandfonline.com/doi/full/10.1080/10962247.2021.1942319#abstract" class="text-blue-600 hover:underline"> Climate Change 
+                    and Weather Extremes: A review of Recent Findings </a>. Since climate data is collected across a large number of weather stations globally, it is important to 
+                understand the complexities involved in estimating global temperatures through collecting large-scale data,
+                as well as potential methodologies for correcting biases and ensuring the accuracy of climate trend analysis through 
+                <a href="https://journals.ametsoc.org/view/journals/clim/10/10/1520-0442_1997_010_2548_eseils_2.0.co_2.xml" class="text-blue-600 hover:underline">
+                    Estimating Sampling Errors in Large-Scale Temperature Averages
+                </a>
+            </p>
+        </div>
 
-    <h3>Introduction to the Data</h3>
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <h3 class="text-2xl font-semibold mb-4">Introduction to the Data</h3>
 
-    <p>Data source: <a href="https://www.kaggle.com/datasets/nelgiriyewithana/global-weather-repository">Global Weather Repository</a>
-    </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                Data source: <a href="https://www.kaggle.com/datasets/nelgiriyewithana/global-weather-repository" class="text-blue-600 hover:underline">Global Weather Repository</a>
+            </p>
 
-    <p> To investigate recent weather trends and patterns on a global scale, we have decided to examine the World Weather Repository 
-      dataset, which contains daily weather data for capital cities around the world, starting from August 2023. We have been able to 
-      obtain the dataset through Kaggle as a CSV file that contains a single table with 41 columns and 28,147 rows. For a specific day, 
-      there are 195 rows with weather condition measurements for capital cities of 195 countries around the world. This dataset provides 
-      40+ features of the current weather and climate conditions globally, including crucial attributes that we are interested in such 
-      as temperature, weather condition, amount of precipitation, humidity, UV index, as well as air quality metrics for carbon monoxide, 
-      nitrogen oxide, PM 2.5, PM 10, sulfur dioxide, and the U.S. EPA air quality index. Most attributes of this dataset are quantitative 
-      (including attributes such as temperature, amount of precipitation, humidity, air quality measurements etc.), as they are 
-      measurements of different features of the weather in cities, however, there is still meaningful ordered (EPA air quality index, 
-      UV index, GB DEFRA Index) and unordered categorical data (weather condition), as well as date/time data that are relevant to our analysis. 
-    </p>  
+            <p class="text-gray-700 leading-relaxed">
+                To investigate recent weather trends and patterns on a global scale, we have decided to examine the World Weather Repository 
+                dataset, which contains daily weather data for capital cities around the world, starting from August 2023. We have been able to 
+                obtain the dataset through Kaggle as a CSV file that contains a single table with 41 columns and 28,147 rows. For a specific day, 
+                there are 195 rows with weather condition measurements for capital cities of 195 countries around the world. This dataset provides 
+                40+ features of the current weather and climate conditions globally, including crucial attributes that we are interested in such 
+                as temperature, weather condition, amount of precipitation, humidity, UV index, as well as air quality metrics for carbon monoxide, 
+                nitrogen oxide, PM 2.5, PM 10, sulfur dioxide, and the U.S. EPA air quality index. Most attributes of this dataset are quantitative 
+                (including attributes such as temperature, amount of precipitation, humidity, air quality measurements etc.), as they are 
+                measurements of different features of the weather in cities, however, there is still meaningful ordered (EPA air quality index, 
+                UV index, GB DEFRA Index) and unordered categorical data (weather condition), as well as date/time data that are relevant to our analysis. 
+            </p>
+        </div>
 
-        <div class="center">
-        <table class="tg">
-            <thead>
-              <tr>
-                <th class="tg-0lax"><b>Variable Name</b></th>
-                <th class="tg-0lax"><b>Details</b></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td class="tg-0lax">PM 2.5</td>
-                <td class="tg-0lax">Level of PM 2.5, measured in µg/m3</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">PM10 AQI</td>
-                <td class="tg-0lax">PM10 Air Quality Index</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">Temperature</td>
-                <td class="tg-0lax">Average daily temperature, in Fahrenheit</td>
-              </tr>
-              <tr>
-                <td class="tg-0lax">Weather Condition</td>
-                <td class="tg-0lax">Daily weather condition</td>
-              </tr>
-
-            </tbody>
+        <div class="bg-white p-6 rounded-lg shadow-md mb-6">
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr>
+                        <th class="border p-2 bg-gray-200"><b>Variable Name</b></th>
+                        <th class="border p-2 bg-gray-200"><b>Details</b></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border p-2">PM 2.5</td>
+                        <td class="border p-2">Level of PM 2.5, measured in µg/m3</td>
+                    </tr>
+                    <tr>
+                        <td class="border p-2">PM10 AQI</td>
+                        <td class="border p-2">PM10 Air Quality Index</td>
+                    </tr>
+                    <tr>
+                        <td class="border p-2">Temperature</td>
+                        <td class="border p-2">Average daily temperature, in Fahrenheit</td>
+                    </tr>
+                    <tr>
+                        <td class="border p-2">Weather Condition</td>
+                        <td class="border p-2">Daily weather condition</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
 
-            <div class = 'center'>
-                <iframe src="interactive_air_quality_map.html" width="80%" height="400px" frameborder="0"></iframe>
-            </div>
+        <div class="text-center mb-6">
+            <iframe src="interactive_air_quality_map.html" width="80%" height="400px" frameborder="0"></iframe>
+        </div>
 
-            <div class = 'center'>
-              <iframe src="interactive_air_quality_map_continents.html" width="80%" height="400px" frameborder="0"></iframe>
-          </div>
-            
-
+        <div class="text-center">
+            <iframe src="interactive_air_quality_map_continents.html" width="80%" height="400px" frameborder="0"></iframe>
+        </div>
+    </div>
 </body>
 </html>
