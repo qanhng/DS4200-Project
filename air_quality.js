@@ -1,4 +1,4 @@
-const width = 400, height = 400;
+const width = 500, height = 500;
 const plot_width = 460, plot_height = 460;
 const margin = { top: 30, bottom: 100, left: 70, right: 30 };
 const space = 30
