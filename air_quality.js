@@ -1,6 +1,6 @@
 const width = 400, height = 400;
 const plot_width = 460, plot_height = 460;
-const margin = { top: 80, bottom: 100, left: 70, right: 50 };
+const margin = { top: 30, bottom: 100, left: 70, right: 30 };
 const space = 30
 
 // Create SVG container for all plots
@@ -79,7 +79,7 @@ Promise.all([asia_data, europe_data]).then(function([asia, europe]) {
         .attr("x", plot_width / 1.5)
         .attr("y", plot_height - 5)
         .text("Weather conditions")
-        .style("font-size", "14px");
+        .style("font-size", "15px");
     
     // Add y-axis label
     asia_plot.append("text")
@@ -89,7 +89,7 @@ Promise.all([asia_data, europe_data]).then(function([asia, europe]) {
         .style("text-anchor", "middle")
         .attr("transform", "rotate(-90)")
         .text("PM2.5 level (µg/m3)")
-        .style("font-size", "14px");
+        .style("font-size", "15px");
 
     // Add bars
     asia_plot.selectAll("rect")
