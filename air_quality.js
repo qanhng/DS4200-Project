@@ -1,6 +1,6 @@
 const width = 500, height = 500;
 const plot_width = 460, plot_height = 460;
-const margin = { top: 30, bottom: 40, left: 70, right: 30 };
+const margin = { top: 30, bottom: 70, left: 70, right: 30 };
 const space = 30
 
 // Create SVG container for all plots
